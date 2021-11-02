@@ -2,7 +2,9 @@
 
 * [README](./README.md)
 * [About](./contents/about.md)
+* [電算部の歴史](./contents/history/link.md)
 * [工華祭]()
+	* [過去の部誌のリンク](./contents/kokasai/history/link.md)
 	* [第22回工華祭](./contents/kokasai/22th/link.md)
 	* [第23回工華祭](./contents/kokasai/23rd/frontpage.md)
 		* [312k]()
