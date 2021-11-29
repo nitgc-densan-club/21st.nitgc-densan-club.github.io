@@ -1,5 +1,7 @@
-on: [ pull_request ]
-
+on:
+  push:
+    branches:
+      - main
 permissions:
   pull-requests: write
   statuses: write
@@ -15,4 +17,4 @@ jobs:
     - name: Markdown Linting Action
       uses: avto-dev/markdown-lint@v1.5.0
       with:
-        args: '**/*.md'
+        args: '**/*.md --ignore src/SUMMARY.md --ignore src/README.md --ignore src/contents/history/link.md --ignore README.md --ignore src/contents/about.md --ignore src/contents/kokasai/history/link.md'
