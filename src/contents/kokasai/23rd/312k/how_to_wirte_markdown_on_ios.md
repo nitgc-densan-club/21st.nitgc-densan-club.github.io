@@ -2,11 +2,15 @@
 
 多くの方は、マークダウンを書くときにはパソコンを使うかと思います。しかし、実はパソコンがなくてもマークダウンはかけるのです！  
 そこで今回はスマホでマークダウンを書く方法についてご紹介します。
-このガイドは、rsteeleさんの[[Mobile] Setting up iOS git-based syncing with mobile app (using Working Copy)](https://forum.obsidian.md/t/mobile-setting-up-ios-git-based-syncing-with-mobile-app-using-working-copy/16499)を参考にして書きました。
+このガイドは、rsteeleさんの
+[[Mobile] Setting up iOS git-based syncing with mobile app (using Working Copy)](https://forum.obsidian.md/t/mobile-setting-up-ios-git-based-syncing-with-mobile-app-using-working-copy/16499)
+を参考にして書きました。
 
 ## 前提条件
 
-[working copy](https://apps.apple.com/jp/app/working-copy-git-client/id896694807)を自由に使うためには、Proアカウントが必要です。(無課金でも使える機能はあります)。もし、あなたが学生ならば、working copy様が、学生向けにプランを出してくださっています。
+[working copy](https://apps.apple.com/jp/app/working-copy-git-client/id896694807)
+を自由に使うためには、Proアカウントが必要です。(無課金でも使える機能はあります)。
+もし、あなたが学生ならば、working copy様が、学生向けにプランを出してくださっています。
 なお、この記事はios向けです。
 
 ## アプリをインストール
@@ -21,7 +25,8 @@
 
 ## Working Copyのセットアップ
 
-1. [Working Copy for students](https://workingcopy.app/education/)にアクセスして、tap hereのリンクを押します。  
+1. [Working Copy for students](https://workingcopy.app/education/)
+にアクセスして、tap hereのリンクを押します。  
 ![student working copy](./static/Working_copy_student.png)
 2. アプリが自動で開かれるので、Githubのアカウントでサインインしてください。  
 ![sign in github](./static/Working_copy_login.png)
@@ -51,7 +56,9 @@ https://github.com/nitgc-densan-club/2021-club-journal.github.io.git
 ![init obisian](./static/OBSIDIAN_init.png)
 2. すると、名前を聞かれるので、お好きな名前を付けてみてください。ここでは**kokasai_2021**にしました。  
 ![kokasai 2021 change](./static/Obisidan_name.png)
-3. すると、作業環境が開かれるので、右上のハンバーガーボタン->設定アイコン->Aboutの順にタップして、Languageに日本語を設定して、Relaunchを、Override config folderには
+3. すると、作業環境が開かれるので、
+右上のハンバーガーボタン->設定アイコン->About
+の順にタップして、Languageに日本語を設定して、Relaunchを、Override config folderには
 **.obsidian.mobile**
 
 と入力して、Relaunchしてください。  
