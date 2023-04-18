@@ -3,8 +3,8 @@
 * [README](./README.md)
 * [About](./contents/about.md)
 * [電算部の歴史](./contents/history/link.md)
-* [初心者向け]()
-	* [環境構築の方法](./contents/for_begginers/environments/environments.md)
+<!-- * [初心者向け]()
+	* [環境構築の方法](./contents/for_begginers/environments/environments.md) -->
 * [工華祭]()
 	* [過去の部誌のリンク](./contents/kokasai/history/link.md)
 	* [第22回工華祭](./contents/kokasai/22th/link.md)
