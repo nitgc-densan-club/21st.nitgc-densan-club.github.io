@@ -4,8 +4,10 @@
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
         <title>Minecraftで学ぶ論理回路 - 群馬工業高等専門学校 電算部</title>
+
+
         <!-- Custom HTML head -->
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        
         <meta name="description" content="電算部のリポジトリです。">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
@@ -16,27 +18,31 @@
         <link rel="stylesheet" href="../../../../css/general.css">
         <link rel="stylesheet" href="../../../../css/chrome.css">
         <link rel="stylesheet" href="../../../../css/print.css" media="print">
+
         <!-- Fonts -->
         <link rel="stylesheet" href="../../../../FontAwesome/css/font-awesome.css">
         <link rel="stylesheet" href="../../../../fonts/fonts.css">
+
         <!-- Highlight.js Stylesheets -->
         <link rel="stylesheet" href="../../../../highlight.css">
         <link rel="stylesheet" href="../../../../tomorrow-night.css">
         <link rel="stylesheet" href="../../../../ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
+
         <!-- MathJax -->
-        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     </head>
     <body>
+    <div id="body-container">
         <!-- Provide site root to javascript -->
-        <script type="text/javascript">
+        <script>
             var path_to_root = "../../../../";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
         </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
-        <script type="text/javascript">
+        <script>
             try {
                 var theme = localStorage.getItem('mdbook-theme');
                 var sidebar = localStorage.getItem('mdbook-sidebar');
@@ -52,7 +58,7 @@
         </script>
 
         <!-- Set the theme before any content is loaded, prevents flash -->
-        <script type="text/javascript">
+        <script>
             var theme;
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
@@ -64,12 +70,14 @@
         </script>
 
         <!-- Hide / unhide sidebar before it is displayed -->
-        <script type="text/javascript">
+        <script>
             var html = document.querySelector('html');
-            var sidebar = 'hidden';
+            var sidebar = null;
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
             }
             html.classList.remove('sidebar-visible');
             html.classList.add("sidebar-" + sidebar);
@@ -77,7 +85,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../../../../index.html"><strong aria-hidden="true">1.</strong> README</a></li><li class="chapter-item expanded "><a href="../../../../contents/about.html"><strong aria-hidden="true">2.</strong> About</a></li><li class="chapter-item expanded "><a href="../../../../contents/history/link.html"><strong aria-hidden="true">3.</strong> 電算部の歴史</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> 初心者向け</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../../contents/for_begginers/environments/environments.html"><strong aria-hidden="true">4.1.</strong> 環境構築の方法</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.</strong> 工華祭</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../../contents/kokasai/history/link.html"><strong aria-hidden="true">5.1.</strong> 過去の部誌のリンク</a></li><li class="chapter-item expanded "><a href="../../../../contents/kokasai/22th/link.html"><strong aria-hidden="true">5.2.</strong> 第22回工華祭</a></li><li class="chapter-item expanded "><a href="../../../../contents/kokasai/23rd/frontpage.html"><strong aria-hidden="true">5.3.</strong> 第23回工華祭</a></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">5.3.1.</strong> 312k</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../../contents/kokasai/23rd/312k/how_to_wirte_markdown_on_ios.html"><strong aria-hidden="true">5.3.1.1.</strong> スマホでマークダウンを書く方法</a></li><li class="chapter-item expanded "><a href="../../../../contents/kokasai/23rd/312k/LED.html"><strong aria-hidden="true">5.3.1.2.</strong> ラズパイでLチカ!!</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.3.2.</strong> namacha</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../../contents/kokasai/23rd/namacha/GitHubProfile.html"><strong aria-hidden="true">5.3.2.1.</strong> GitHubProfileの勧め</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.3.3.</strong> tt6mzn</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../../contents/kokasai/23rd/tt6mzn/Redstone.html" class="active"><strong aria-hidden="true">5.3.3.1.</strong> Minecraftで学ぶ論理回路</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.3.4.</strong> tomoking2004</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../../contents/kokasai/23rd/tomoking2004/article.html"><strong aria-hidden="true">5.3.4.1.</strong> pythonでゲーム作ってみた</a></li></ol></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.</strong> IT勉強会</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../../contents/session/6th/link.html"><strong aria-hidden="true">6.1.</strong> IT勉強会6th</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../../../../index.html"><strong aria-hidden="true">1.</strong> README</a></li><li class="chapter-item expanded "><a href="../../../../contents/about.html"><strong aria-hidden="true">2.</strong> About</a></li><li class="chapter-item expanded "><a href="../../../../contents/history/link.html"><strong aria-hidden="true">3.</strong> 電算部の歴史</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> 工華祭</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../../contents/kokasai/history/link.html"><strong aria-hidden="true">4.1.</strong> 過去の部誌のリンク</a></li><li class="chapter-item expanded "><a href="../../../../contents/kokasai/22th/link.html"><strong aria-hidden="true">4.2.</strong> 第22回工華祭</a></li><li class="chapter-item expanded "><a href="../../../../contents/kokasai/23rd/frontpage.html"><strong aria-hidden="true">4.3.</strong> 第23回工華祭</a></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">4.3.1.</strong> 312k</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../../contents/kokasai/23rd/312k/how_to_wirte_markdown_on_ios.html"><strong aria-hidden="true">4.3.1.1.</strong> スマホでマークダウンを書く方法</a></li><li class="chapter-item expanded "><a href="../../../../contents/kokasai/23rd/312k/LED.html"><strong aria-hidden="true">4.3.1.2.</strong> ラズパイでLチカ!!</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.3.2.</strong> namacha</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../../contents/kokasai/23rd/namacha/GitHubProfile.html"><strong aria-hidden="true">4.3.2.1.</strong> GitHubProfileの勧め</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.3.3.</strong> tt6mzn</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../../contents/kokasai/23rd/tt6mzn/Redstone.html" class="active"><strong aria-hidden="true">4.3.3.1.</strong> Minecraftで学ぶ論理回路</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.3.4.</strong> tomoking2004</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../../contents/kokasai/23rd/tomoking2004/article.html"><strong aria-hidden="true">4.3.4.1.</strong> pythonでゲーム作ってみた</a></li></ol></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.</strong> IT勉強会</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../../contents/session/6th/link.html"><strong aria-hidden="true">5.1.</strong> IT勉強会6th</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -85,7 +93,7 @@
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
-                <div id="menu-bar-hover-placeholder"></div>
+                                <div id="menu-bar-hover-placeholder"></div>
                 <div id="menu-bar" class="menu-bar sticky bordered">
                     <div class="left-buttons">
                         <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
@@ -95,7 +103,7 @@
                             <i class="fa fa-paint-brush"></i>
                         </button>
                         <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
@@ -112,6 +120,7 @@
                         <a href="../../../../print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
+
                     </div>
                 </div>
 
@@ -125,8 +134,9 @@
                         </ul>
                     </div>
                 </div>
+
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
-                <script type="text/javascript">
+                <script>
                     document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
                     document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
                     Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
@@ -167,12 +177,13 @@ Minecraftのゲーム画面を使いながら論理回路を説明する試み�
 もう一方はオフであり信号を出力していません。
 レバーのオンオフの組み合わせを変えると、レッドストーンランプがついたり消えたりします。
 この組み合わせを表にまとめると、次のようになります。</p>
-<table><thead><tr><th>\(X\)</th><th>\(Y\)</th><th>\(f\)</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>\(X\)</th><th>\(Y\)</th><th>\(f\)</th></tr></thead><tbody>
 <tr><td>0</td><td>0</td><td>1</td></tr>
 <tr><td>0</td><td>1</td><td>1</td></tr>
 <tr><td>1</td><td>0</td><td>1</td></tr>
 <tr><td>1</td><td>1</td><td>0</td></tr>
 </tbody></table>
+</div>
 <p>ここで、レッドストーンの信号がオンであることを\(1\)、オフであることを\(0\)とあらわすことにします。
 さらに、入力となる二つのレバーにはそれぞれ\(X\)、\(Y\)と名前を付け、
 出力であるレッドストーンランプには\(f\)と名前を付けています。
@@ -192,10 +203,11 @@ Minecraftのゲーム画面を使いながら論理回路を説明する試み�
 <h3 id="not回路"><a class="header" href="#not回路">NOT回路</a></h3>
 <p>1つの入力を持つ論理関数です。
 真理値表は以下のようになります。</p>
-<table><thead><tr><th>\(X\)</th><th>\(f\)</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>\(X\)</th><th>\(f\)</th></tr></thead><tbody>
 <tr><td>0</td><td>1</td></tr>
 <tr><td>1</td><td>0</td></tr>
 </tbody></table>
+</div>
 <p>0は1に、1は0に反転する論理関数です。
 この論理関数は、次式のように表すことにします。</p>
 <p>\(f = \overline{X}\)</p>
@@ -204,12 +216,13 @@ Minecraftのゲーム画面を使いながら論理回路を説明する試み�
 <h3 id="or回路"><a class="header" href="#or回路">OR回路</a></h3>
 <p>2つの入力を持つ論理関数です。
 真理値表は次のようになります。</p>
-<table><thead><tr><th>\(X\)</th><th>\(Y\)</th><th>\(f\)</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>\(X\)</th><th>\(Y\)</th><th>\(f\)</th></tr></thead><tbody>
 <tr><td>0</td><td>0</td><td>0</td></tr>
 <tr><td>0</td><td>1</td><td>1</td></tr>
 <tr><td>1</td><td>0</td><td>1</td></tr>
 <tr><td>1</td><td>1</td><td>1</td></tr>
 </tbody></table>
+</div>
 <p>2つある入力のうち、少なくともどちらかが1なら、出力が1となる論理関数です。
 この論理関数は、次式のようにあらわすことにします。</p>
 <p>\(f = X + Y\)</p>
@@ -225,12 +238,13 @@ Minecraftのゲーム画面を使いながら論理回路を説明する試み�
 真理値表は次の通りです。
 この論理関数は、次式のように表すことにします。</p>
 <p>\(f = XY\)</p>
-<table><thead><tr><th>\(X\)</th><th>\(Y\)</th><th>\(f\)</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>\(X\)</th><th>\(Y\)</th><th>\(f\)</th></tr></thead><tbody>
 <tr><td>0</td><td>0</td><td>0</td></tr>
 <tr><td>0</td><td>1</td><td>0</td></tr>
 <tr><td>1</td><td>0</td><td>0</td></tr>
 <tr><td>1</td><td>1</td><td>1</td></tr>
 </tbody></table>
+</div>
 <p>二つの入力が同時に1となったときにのみ1を出力する論理関数です。
 Minecraftでの再現例は以下です。</p>
 <p><img src="./resources/and_gate.jpg" alt="and gate" /></p>
@@ -244,7 +258,7 @@ Minecraftでの再現例は以下です。</p>
 NOTとANDを組み合わせて、次のような論理関数を考えてみます。</p>
 <p>\(f = \overline{A}BC\)</p>
 <p>この関数の真理値表は以下のようになります。</p>
-<table><thead><tr><th>\(A\)</th><th>\(B\)</th><th>\(C\)</th><th>\(f\)</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>\(A\)</th><th>\(B\)</th><th>\(C\)</th><th>\(f\)</th></tr></thead><tbody>
 <tr><td>0</td><td>0</td><td>0</td><td>0</td></tr>
 <tr><td>0</td><td>0</td><td>1</td><td>0</td></tr>
 <tr><td>0</td><td>1</td><td>0</td><td>0</td></tr>
@@ -254,6 +268,7 @@ NOTとANDを組み合わせて、次のような論理関数を考えてみま�
 <tr><td>1</td><td>1</td><td>0</td><td>0</td></tr>
 <tr><td>1</td><td>1</td><td>1</td><td>0</td></tr>
 </tbody></table>
+</div>
 <p>\(A = 0, B = 1, C = 1\)の時にのみ\(f = 1\)となることがわかります。
 このように、変数の一部をNOT回路に通してからすべての変数をAND回路に通す論理関数を考えると、
 真理値表の出力は、どこかの行のみが1になり、それ以外は0となることがわかります。
@@ -261,7 +276,7 @@ NOTとANDを組み合わせて、次のような論理関数を考えてみま�
 例えば一行目のみが1となるような論理関数は次式です。</p>
 <p>\(f = \overline{A}\overline{B}\overline{C}\)</p>
 <p>以上を踏まえて、次のような真理値表を表す論理関数を導出しましょう。</p>
-<table><thead><tr><th>\(A\)</th><th>\(B\)</th><th>\(C\)</th><th>\(f\)</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>\(A\)</th><th>\(B\)</th><th>\(C\)</th><th>\(f\)</th></tr></thead><tbody>
 <tr><td>0</td><td>0</td><td>0</td><td>1</td></tr>
 <tr><td>0</td><td>0</td><td>1</td><td>0</td></tr>
 <tr><td>0</td><td>1</td><td>0</td><td>0</td></tr>
@@ -271,6 +286,7 @@ NOTとANDを組み合わせて、次のような論理関数を考えてみま�
 <tr><td>1</td><td>1</td><td>0</td><td>0</td></tr>
 <tr><td>1</td><td>1</td><td>1</td><td>0</td></tr>
 </tbody></table>
+</div>
 <p>真理値表を見ると1行目と4行目のみが1が出力され、それ以外は0が出力されます。
 先の議論から、1行目のみを1とし、それ以外を0とするような論理関数は次のように表されます。
 これを\(f_{1}\)としています。</p>
@@ -294,9 +310,11 @@ NOTとANDを組み合わせて、次のような論理関数を考えてみま�
                             <a rel="prev" href="../../../../contents/kokasai/23rd/namacha/GitHubProfile.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
+
                             <a rel="next" href="../../../../contents/kokasai/23rd/tomoking2004/article.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
+
                         <div style="clear: both"></div>
                     </nav>
                 </div>
@@ -306,6 +324,7 @@ NOTとANDを組み合わせて、次のような論理関数を考えてみま�
                     <a rel="prev" href="../../../../contents/kokasai/23rd/namacha/GitHubProfile.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
+
                     <a rel="next" href="../../../../contents/kokasai/23rd/tomoking2004/article.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
@@ -313,24 +332,33 @@ NOTとANDを組み合わせて、次のような論理関数を考えてみま�
 
         </div>
 
-        <script type="text/javascript">
+
+
+        <script>
             window.playground_line_numbers = true;
         </script>
-        <script type="text/javascript">
+
+        <script>
             window.playground_copyable = true;
         </script>
-        <script src="../../../../ace.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../../../../editor.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../../../../mode-rust.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../../../../theme-dawn.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../../../../theme-tomorrow_night.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../../../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../../../../mark.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../../../../searcher.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../../../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../../../../highlight.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../../../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../../../../ace.js"></script>
+        <script src="../../../../editor.js"></script>
+        <script src="../../../../mode-rust.js"></script>
+        <script src="../../../../theme-dawn.js"></script>
+        <script src="../../../../theme-tomorrow_night.js"></script>
+
+        <script src="../../../../elasticlunr.min.js"></script>
+        <script src="../../../../mark.min.js"></script>
+        <script src="../../../../searcher.js"></script>
+
+        <script src="../../../../clipboard.min.js"></script>
+        <script src="../../../../highlight.js"></script>
+        <script src="../../../../book.js"></script>
 
         <!-- Custom JS scripts -->
+
+
+    </div>
     </body>
 </html>
